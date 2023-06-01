@@ -1,0 +1,58 @@
+++++++ React : 
+- repetation of code avoid 
+- web application : pages not reloaded just compmonent changes ( pages remain static ) speed achive  
+- web application : index.html 1 page asto 
+  inside content will change using JS
+- index.js root element selelct using document.getElemntbyID  and 
+   root.render() method do putting of  react component  into web page . 
+- Comonent : function with first latter uppercase 
+  return JSX ( syntax extension allows write HTML like code within js )  use js {} inside return 
+- rafc shortcut 
+=======================================================================================
+++++++ import and expore : one compoent form another file use 
+many component :   export  default { c1 ,c2 ,c3 } 
+import {c1 ,c2 }  from "filepath " 
+
+========================================================================================
++++++ props : data passing to the compoennt as object kwons props 
+fun Cap = ( prop ) => {} 
+
+calling  <Cap abc = "1" age = "23" name = "pramod" >  data passed to comenent
+component reciver this as object that contiain abc , age , name as properties 
+{ v1 , v2 } = obj  (destructring  v1 and v2 propertie in obct is assined 
+
+==========================================================================================
+++++++ How to add css in component : 
+diffenct css file makin  in folder 
+css write and import in componetn 
+=> sueqnce of css import matter if 2 files define css for 1 things upper give executed first then 2nd apply  
+important keyword then strictly that applied css 
+==============================================================================================
+=> routing : react-dom pakage required . 
+import BrowseRouter from route-dom
+ <Router>
+   <Routes>
+       <Route path = url  element = { which comoponent render} />
+       <Route path = url2  element = { which comoponent render} />
+       <Route path = url3  element = { which comoponent render} />
+       if any 2 path mathes than only first one is render this use o Routes . 
+   </Routes>
+ </Router> 
+
+Dyanamic routing : 
+path = "/about/:id" what it will do mathes url upto : semicolor  
+        another part in url in broswer considered as id 
+        we can acess this by  
+        useParams import from route dom 
+        params = useParams()  // must be inside the component .   
+        params.Id   
+        
+ links :  import Links 
+ <Link to ="path" > home </Link> 
+ <Link to = url > home </Link>  contain of page changes but Page not reload again . 
+ 
+
+     
+ 
+======================================================================================
+
